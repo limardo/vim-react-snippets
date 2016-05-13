@@ -8,8 +8,44 @@ import React from 'react';
 export default class ${1:ClassName} extends React.Component {
 	render () {
 		return (
-			${VISUAL}$0
-		)
+			$0
+		);
 	}
 };
+endsnippet
+
+snippet rccl "React: class component (legacy)" b
+import React from 'react';
+
+class ${1:ClassName} extends React.Component {
+	render () {
+		return (
+			$0
+		);
+	}
+};
+
+export default $1;
+endsnippet
+
+snippet rec "React: only component" b
+class ${1:ClassName} extends React.Component {
+	render () {
+		return (
+			$0
+		);
+	}
+};
+endsnippet
+
+snippet cdm "React: componentDidMount() {...}" b
+componentDidMount () {
+	$0
+}
+endsnippet
+
+snippet cdup "React: componentDidUpdate(prevProps, prevState) {...}" b
+componentDidUpdate (prevProps, prevState) {
+	$0
+}
 endsnippet
