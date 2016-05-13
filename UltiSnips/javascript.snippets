@@ -8,7 +8,7 @@ import React from 'react';
 export default class ${1:ClassName} extends React.Component {
 	render () {
 		return (
-			$0
+			${VISUAL}$0
 		);
 	}
 };
@@ -20,7 +20,7 @@ import React from 'react';
 class ${1:ClassName} extends React.Component {
 	render () {
 		return (
-			$0
+			${VISUAL}$0
 		);
 	}
 };
@@ -32,7 +32,7 @@ snippet rec "React: only component" b
 class ${1:ClassName} extends React.Component {
 	render () {
 		return (
-			$0
+			${VISUAL}$0
 		);
 	}
 };
@@ -40,12 +40,71 @@ endsnippet
 
 snippet cdm "React: componentDidMount() {...}" b
 componentDidMount () {
-	$0
+	${VISUAL}$0
 }
+
 endsnippet
 
 snippet cdup "React: componentDidUpdate(prevProps, prevState) {...}" b
 componentDidUpdate (prevProps, prevState) {
-	$0
+	${VISUAL}$0
 }
+
+endsnippet
+
+snippet cwm "React: componentWillMount() {...}" b
+componentWillMount () {
+	${VISUAL}$0
+}
+
+endsnippet
+
+snippet cwr "React: componentWillReceiveProps(nextProps) {...}" b
+componentWillReceiveProps (nextProps) {
+	${VISUAL}$0
+}
+
+endsnippet
+
+snippet cwun "React: componentWillUnmount() {...}" b
+componentWillUnmount () {
+	${VISUAL}$0
+}
+
+endsnippet
+
+snippet cwup "React: componentWillUpdate (nextProps, nextState) {...}" b
+componentWillUpdate (nextProps, nextState) {
+	${VISUAL}$0
+}
+
+endsnippet
+
+snippet fdn "React: React.findDOMNode(...)" b
+React.findDOMNode(${1:this})$0
+endsnippet
+
+snippet sst "React: this.setState(...)" b
+this.setState(${1:(state, props) => ${0}})
+endsnippet
+
+snippet scu "React: shouldComponentUpdate(nextProps, nextState) {...}" b
+shouldComponentUpdate (nextProps, nextState) {
+	${1:return ${2:false};}${0}
+}
+endsnippet
+
+snippet props "React: this.props" b
+this.props${1:.}
+endsnippet
+
+snippet state "React: this.state" b
+this.state${1:.}
+endsnippet
+
+snippet pt "React: propTypes" b
+static propTypes = {
+	$1: $2
+};
+$0
 endsnippet
