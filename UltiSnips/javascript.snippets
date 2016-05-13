@@ -6,7 +6,7 @@ snippet rcc "React: class component" b
 import React from 'react';
 
 export default class ${1:ClassName} extends React.Component {
-	render () {
+	render() {
 		return (
 			${VISUAL}$0
 		);
@@ -18,7 +18,7 @@ snippet rccl "React: class component (legacy)" b
 import React from 'react';
 
 class ${1:ClassName} extends React.Component {
-	render () {
+	render() {
 		return (
 			${VISUAL}$0
 		);
@@ -30,7 +30,7 @@ endsnippet
 
 snippet rec "React: only component" b
 class ${1:ClassName} extends React.Component {
-	render () {
+	render() {
 		return (
 			${VISUAL}$0
 		);
@@ -39,59 +39,61 @@ class ${1:ClassName} extends React.Component {
 endsnippet
 
 snippet cdm "React: componentDidMount() {...}" b
-componentDidMount () {
+componentDidMount() {
 	${VISUAL}$0
 }
 
 endsnippet
 
 snippet cdup "React: componentDidUpdate(prevProps, prevState) {...}" b
-componentDidUpdate (prevProps, prevState) {
+componentDidUpdate(prevProps, prevState) {
 	${VISUAL}$0
 }
 
 endsnippet
 
 snippet cwm "React: componentWillMount() {...}" b
-componentWillMount () {
+componentWillMount() {
 	${VISUAL}$0
 }
 
 endsnippet
 
 snippet cwr "React: componentWillReceiveProps(nextProps) {...}" b
-componentWillReceiveProps (nextProps) {
+componentWillReceiveProps(nextProps) {
 	${VISUAL}$0
 }
 
 endsnippet
 
 snippet cwun "React: componentWillUnmount() {...}" b
-componentWillUnmount () {
+componentWillUnmount() {
 	${VISUAL}$0
 }
 
 endsnippet
 
-snippet cwup "React: componentWillUpdate (nextProps, nextState) {...}" b
-componentWillUpdate (nextProps, nextState) {
+snippet cwup "React: componentWillUpdate(nextProps, nextState) {...}" b
+componentWillUpdate(nextProps, nextState) {
 	${VISUAL}$0
 }
 
 endsnippet
 
-snippet fdn "React: React.findDOMNode(...)" b
-React.findDOMNode(${1:this})$0
+
+snippet scu "React: shouldComponentUpdate(nextProps, nextState) {...}" b
+shouldComponentUpdate(nextProps, nextState) {
+	${1:return ${2:false};}${0}
+}
+
+endsnippet
+
+snippet fdn "React: ReactDOM.findDOMNode(...)" b
+ReactDOM.findDOMNode(${1:this})$0
 endsnippet
 
 snippet sst "React: this.setState(...)" b
-this.setState(${1:(state, props) => ${0}})
-endsnippet
-
-snippet scu "React: shouldComponentUpdate(nextProps, nextState) {...}" b
-shouldComponentUpdate (nextProps, nextState) {
-	${1:return ${2:false};}${0}
-}
+this.setState(${1:{$2: $3}})$0
 endsnippet
 
 snippet props "React: this.props" b
@@ -106,5 +108,4 @@ snippet pt "React: propTypes" b
 static propTypes = {
 	$1: $2
 };
-$0
 endsnippet
